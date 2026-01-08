@@ -17,7 +17,8 @@ Alloc은 메모리를 할당하듯, 프로젝트의 요구사항과 일정에 �
 - 링크: https://docs.google.com/spreadsheets/d/1mPJ6UKxQZNp0anNGH0AcKaa_K402aaPGrOiU8Jtvq-g/edit?gid=0#gid=0
 
 ### 5. ERD
-<img width="3790" height="2122" alt="image" src="https://github.com/user-attachments/assets/7fd76fe0-2217-4b80-81f5-6a1c7b9a94eb" />
+<img width="3820" height="2122" alt="image" src="https://github.com/user-attachments/assets/946b2245-31a6-4f83-81f6-4aef0db75890" />
+
 
 
 
