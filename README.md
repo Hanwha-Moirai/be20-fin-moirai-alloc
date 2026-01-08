@@ -17,7 +17,8 @@ Alloc은 메모리를 할당하듯, 프로젝트의 요구사항과 일정에 �
 - 링크: https://docs.google.com/spreadsheets/d/1mPJ6UKxQZNp0anNGH0AcKaa_K402aaPGrOiU8Jtvq-g/edit?gid=0#gid=0
 
 ### 5. ERD
-<img width="3840" height="2122" alt="image" src="https://github.com/user-attachments/assets/07682b84-7ab1-4f6f-85fa-ccf76e07b237" />
+<img width="3790" height="2122" alt="image" src="https://github.com/user-attachments/assets/7fd76fe0-2217-4b80-81f5-6a1c7b9a94eb" />
+
 
 
 ### 6. 화면 설계서 (Figma)
