@@ -11,17 +11,17 @@ Alloc은 **프로젝트 인력 배치**와 **일정/진척 관리**를 중심으
 ## 📄 문서 링크 모음
 
 ### 1. 프로젝트 기획서 (Google Docs)
-- 링크: 👉 [프로젝트 기획서 바로가기]([https://docs.google.com/document/d/14nblNrg7cs79-tRuyx1G-IyQSu4VreXTNj0hC7ef214/edit?tab=t.0](https://docs.google.com/document/d/14nblNrg7cs79-tRuyx1G-IyQSu4VreXTNj0hC7ef214/edit?tab=t.0))
+- 링크: https://docs.google.com/document/d/14nblNrg7cs79-tRuyx1G-IyQSu4VreXTNj0hC7ef214/edit?tab=t.0](https://docs.google.com/document/d/14nblNrg7cs79-tRuyx1G-IyQSu4VreXTNj0hC7ef214/edit?tab=t.0
 
 ### 2. 요구사항 정의서 (Google Sheets)
-- 링크: 👉 [요구사항 정의서 바로가기]([REQUIREMENTS_SPEC_SHEET_LINK](https://docs.google.com/spreadsheets/d/13ujhnsdJ3jMCO3p6hz1_swOi9t_xN-WjZ-ZYx5wCbhk/edit?gid=1456274635#gid=1456274635))
+- 링크: https://docs.google.com/spreadsheets/d/13ujhnsdJ3jMCO3p6hz1_swOi9t_xN-WjZ-ZYx5wCbhk/edit?gid=1456274635#gid=1456274635
 
 ### 3. 시스템 아키텍처 (PNG)
 <img width="2661" height="1711" alt="image" src="https://github.com/user-attachments/assets/8b56f9b3-5983-4a9b-aec7-8bd6846614e1" />
 
 
 ### 4. WBS (Google Sheets)
-- 링크: 👉 [WBS 바로가기]([WBS_SHEET_LINK](https://docs.google.com/spreadsheets/d/1mPJ6UKxQZNp0anNGH0AcKaa_K402aaPGrOiU8Jtvq-g/edit?gid=0#gid=0))
+- 링크: https://docs.google.com/spreadsheets/d/1mPJ6UKxQZNp0anNGH0AcKaa_K402aaPGrOiU8Jtvq-g/edit?gid=0#gid=0
 
 ### 5. ERD
 <img width="3840" height="2122" alt="image" src="https://github.com/user-attachments/assets/07682b84-7ab1-4f6f-85fa-ccf76e07b237" />
