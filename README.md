@@ -28,7 +28,7 @@ Alloc은 **프로젝트 인력 배치**와 **일정/진척 관리**를 중심으
 
 
 ### 6. 화면 설계서 (Figma)
-- 링크: 👉 [화면 설계서(Figma) 바로가기](FIGMA_DESIGN_LINK)
+- 링크: https://www.figma.com/design/kvcpQG0Ngh2SxiFlUpbg3w/Alloc?node-id=58-481&t=zw4TDnVENOx4qhsx-1
 
 ---
 
