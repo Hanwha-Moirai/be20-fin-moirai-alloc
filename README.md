@@ -26,12 +26,11 @@ Alloc은 메모리를 할당하듯, 프로젝트의 요구사항과 일정에 �
 ### 6. 화면 설계서 (Figma)
 - 링크: https://www.figma.com/design/kvcpQG0Ngh2SxiFlUpbg3w/Alloc?node-id=58-481&t=zw4TDnVENOx4qhsx-1
 
-
 ### 7. UI/UX 테스트 결과서
 - 링크: https://docs.google.com/spreadsheets/d/1NMmfMxpjvc9iqrPi6JGYub-fwfCUwp2pQjR5YVK1uVM/edit?gid=0#gid=0
 
 ### 8. 단위 테스트 결과서 
-- 링크: 
+- 링크: <img width="610" height="633" alt="image" src="https://github.com/user-attachments/assets/b0222600-efe2-4870-9390-6f1b27f3e66c" />
 
 ### 9. Git 형상 관리 전략
 <img width="626" height="368" alt="image" src="https://github.com/user-attachments/assets/1f504946-e229-43f2-9c04-c76ba1867f52" />
