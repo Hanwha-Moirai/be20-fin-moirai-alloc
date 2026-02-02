@@ -10,7 +10,8 @@ Alloc은 메모리를 할당하듯, 프로젝트의 요구사항과 일정에 �
 - 링크: https://docs.google.com/spreadsheets/d/13ujhnsdJ3jMCO3p6hz1_swOi9t_xN-WjZ-ZYx5wCbhk/edit?gid=1456274635#gid=1456274635
 
 ### 3. 시스템 아키텍처 (PNG)
-<img width="2661" height="1711" alt="image" src="https://github.com/user-attachments/assets/8b56f9b3-5983-4a9b-aec7-8bd6846614e1" />
+<img width="2673" height="1707" alt="image" src="https://github.com/user-attachments/assets/117dbe00-6f2b-49f2-ac2f-316732c41e2c" />
+
 
 
 ### 4. WBS (Google Sheets)
