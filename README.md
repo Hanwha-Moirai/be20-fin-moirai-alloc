@@ -38,12 +38,9 @@ Alloc은 메모리를 할당하듯, 프로젝트의 요구사항과 일정에 �
 
 ---
 
-## 🛠 기술 스택 (예시)
-- Backend: Spring Boot, FASTAPI
-- Frontend: Vue
-- Database: MariaDB, Qdrant
-- AI: Langchain, QWEN
-- Infra: AWS, Docker
+## 🛠 기술 스택
+<img width="712" height="402" alt="image" src="https://github.com/user-attachments/assets/a24ca2df-13f8-4aa0-a31c-24cce27de753" />
+
 
 ---
 
