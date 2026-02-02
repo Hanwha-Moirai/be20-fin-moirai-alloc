@@ -7,7 +7,7 @@ Alloc은 메모리를 할당하듯, 프로젝트의 요구사항과 일정에 �
 - 링크: https://docs.google.com/document/d/14nblNrg7cs79-tRuyx1G-IyQSu4VreXTNj0hC7ef214/edit?tab=t.0](https://docs.google.com/document/d/14nblNrg7cs79-tRuyx1G-IyQSu4VreXTNj0hC7ef214/edit?tab=t.0
 
 ### 2. 요구사항 정의서 (Google Sheets)
-- 링크: https://docs.google.com/spreadsheets/d/13ujhnsdJ3jMCO3p6hz1_swOi9t_xN-WjZ-ZYx5wCbhk/edit?gid=1456274635#gid=1456274635
+- 링크: https://docs.google.com/spreadsheets/d/13ujhnsdJ3jMCO3p6hz1_swOi9t_xN-WjZ-ZYx5wCbhk/edit?pli=1&gid=1733522197#gid=1733522197
 
 ### 3. 시스템 아키텍처 (PNG)
 <img width="2673" height="1707" alt="image" src="https://github.com/user-attachments/assets/49bd47ec-0d05-460e-9b51-27e6fcf70636" />
