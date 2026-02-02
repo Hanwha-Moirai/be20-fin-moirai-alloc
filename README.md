@@ -35,7 +35,8 @@ Alloc은 메모리를 할당하듯, 프로젝트의 요구사항과 일정에 �
 <img width="610" height="633" alt="image" src="https://github.com/user-attachments/assets/b0222600-efe2-4870-9390-6f1b27f3e66c" />
 
 ### 10. Git 형상 관리 전략
-<img width="626" height="368" alt="image" src="https://github.com/user-attachments/assets/1f504946-e229-43f2-9c04-c76ba1867f52" />
+<img width="610" height="389" alt="image" src="https://github.com/user-attachments/assets/81fd0d0b-7cb7-4def-88c9-7ebdca7774c9" />
+
 
 
 ---
