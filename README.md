@@ -30,7 +30,7 @@ Alloc은 메모리를 할당하듯, 프로젝트의 요구사항과 일정에 �
 - 링크: https://docs.google.com/spreadsheets/d/1NMmfMxpjvc9iqrPi6JGYub-fwfCUwp2pQjR5YVK1uVM/edit?gid=0#gid=0
 
 ### 8. 단위 테스트 결과서 
-- 링크: <img width="610" height="633" alt="image" src="https://github.com/user-attachments/assets/b0222600-efe2-4870-9390-6f1b27f3e66c" />
+<img width="610" height="633" alt="image" src="https://github.com/user-attachments/assets/b0222600-efe2-4870-9390-6f1b27f3e66c" />
 
 ### 9. Git 형상 관리 전략
 <img width="626" height="368" alt="image" src="https://github.com/user-attachments/assets/1f504946-e229-43f2-9c04-c76ba1867f52" />
