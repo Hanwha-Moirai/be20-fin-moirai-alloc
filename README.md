@@ -89,18 +89,32 @@ IT 프로젝트에서 PM이 겪는
 
 ---
 
-### 🚚 CI/CD (배포 자동화)
-- **CI/CD 계획서**  
-  👉 docs/cicd/README.md
+### 🚚 CI/CD 계획서
+- **백엔드 CI/CD**
 
-- **배포 파이프라인 요약**
-    - PR: Build & Test (품질 검증)
-    - main merge: Build & Test → Docker Image Build/Push → Amazon ECR → ECS 서비스 업데이트
+- 백엔드 코드는 GitHub Actions 기반으로 **빌드 → 테스트 → 컨테이너 배포**까지 자동화되어 있습니다.
+  ![백엔드CI/CD](docs/cicd/backend_cicd.png)
 
-- **Pipeline Diagram**  
-  ![CI/CD Pipeline](docs/images/cicd_pipeline.png)
+**Flow**
+1. **Commit & Push**: 백엔드 소스 코드 변경 사항을 GitHub에 푸시
+2. **CI (GitHub Actions)**: Gradle 빌드 및 테스트 수행
+3. **Containerize**: Docker 이미지 빌드
+4. **Registry (Amazon ECR)**: Docker 이미지를 ECR에 Push
+5. **Release**: 새로운 **ECS Task Definition** 등록(이미지 태그 반영)
+6. **Deploy (Amazon ECS)**: ECS Service 업데이트 및 롤링 배포로 신규 태스크 적용
 
-  
+
+
+- **프론트엔드 CI/CD**
+- 프론트엔드는 GitHub Actions 기반으로 **빌드 → S3 업로드 → CloudFront 배포**까지 자동화되어 있습니다.
+  ![프론트엔드CI/CD](docs/cicd/frontend_cicd.png)
+
+ **Flow**
+1. **Commit & Push**: 프론트엔드 소스 코드를 GitHub에 푸시
+2. **Build (GitHub Actions)**: 의존성 설치 후 정적 빌드 산출물 생성
+3. **Publish (Amazon S3)**: 빌드 결과물을 S3 버킷에 업로드(정적 호스팅)
+4. **Deliver (Amazon CloudFront)**: CloudFront를 통해 전 세계 엣지로 정적 리소스 배포  
+   - 필요 시 캐시 무효화(Invalidation)로 변경 사항 즉시 반영 
 ---
 
 ### 🔀 협업 및 형상 관리
