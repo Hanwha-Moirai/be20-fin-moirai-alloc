@@ -103,6 +103,8 @@ IT 프로젝트에서 PM이 겪는
 5. **Release**: 새로운 **ECS Task Definition** 등록(이미지 태그 반영)
 6. **Deploy (Amazon ECS)**: ECS Service 업데이트 및 롤링 배포로 신규 태스크 적용
 
+
+
 - **프론트엔드 CI/CD**
 - 프론트엔드는 GitHub Actions 기반으로 **빌드 → S3 업로드 → CloudFront 배포**까지 자동화되어 있습니다.
   ![프론트엔드CI/CD](docs/cicd/frontend_cicd.png)
