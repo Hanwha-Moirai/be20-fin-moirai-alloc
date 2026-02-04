@@ -91,7 +91,7 @@ IT 프로젝트에서 PM이 겪는
 
 ### 🚚 CI/CD 계획서
 - **백엔드 CI/CD**  
-  👉 docs/cicd/backend_cicd
+  ![백엔드CI/CD](docs/cicd/backend_cicd.png)
 
 - **배포 파이프라인 요약**
     - PR: Build & Test (품질 검증)
