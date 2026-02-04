@@ -92,7 +92,7 @@ IT 프로젝트에서 PM이 겪는
 ### 🚚 CI/CD 계획서
 - **백엔드 CI/CD**
 
-- 백엔드 코드는 GitHub Actions 기반으로 **빌드 → 테스트 → 컨테이너 배포(ECS)**까지 자동화되어 있습니다.
+- 백엔드 코드는 GitHub Actions 기반으로 **빌드 → 테스트 → 컨테이너 배포**까지 자동화되어 있습니다.
   ![백엔드CI/CD](docs/cicd/backend_cicd.png)
 
 **Flow**
