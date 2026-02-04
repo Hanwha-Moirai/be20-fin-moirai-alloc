@@ -89,6 +89,20 @@ IT 프로젝트에서 PM이 겪는
 
 ---
 
+### 🚚 CI/CD (배포 자동화)
+- **CI/CD 계획서**  
+  👉 docs/cicd/README.md
+
+- **배포 파이프라인 요약**
+    - PR: Build & Test (품질 검증)
+    - main merge: Build & Test → Docker Image Build/Push → Amazon ECR → ECS 서비스 업데이트
+
+- **Pipeline Diagram**  
+  ![CI/CD Pipeline](docs/images/cicd_pipeline.png)
+
+  
+---
+
 ### 🔀 협업 및 형상 관리
 - **Git 형상 관리 전략**  
   ![Git Strategy](https://github.com/user-attachments/assets/81fd0d0b-7cb7-4def-88c9-7ebdca7774c9)
