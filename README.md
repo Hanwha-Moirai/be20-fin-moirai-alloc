@@ -94,6 +94,9 @@ IT 프로젝트에서 PM이 겪는
 
 - 백엔드 코드는 GitHub Actions 기반으로 **빌드 → 테스트 → 컨테이너 배포**까지 자동화되어 있습니다.
   ![백엔드CI/CD](docs/cicd/backend_cicd.png)
+  ![백엔드CI/CD](docs/cicd/백엔드배포.png)
+  ![백엔드CI/CD](docs/cicd/백엔드배포_build.png)
+  ![백엔드CI/CD](docs/cicd/백엔드배포_deploy.png)
 
 **Flow**
 1. **Commit & Push**: 백엔드 소스 코드 변경 사항을 GitHub에 푸시
@@ -108,6 +111,7 @@ IT 프로젝트에서 PM이 겪는
 - **프론트엔드 CI/CD**
 - 프론트엔드는 GitHub Actions 기반으로 **빌드 → S3 업로드 → CloudFront 배포**까지 자동화되어 있습니다.
   ![프론트엔드CI/CD](docs/cicd/frontend_cicd.png)
+  ![프론트엔드CI/CD](docs/cicd/프론트배포.png)
 
  **Flow**
 1. **Commit & Push**: 프론트엔드 소스 코드를 GitHub에 푸시
