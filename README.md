@@ -87,6 +87,9 @@ IT 프로젝트에서 PM이 겪는
 - **단위 테스트 결과**  
   ![Unit Test](https://github.com/user-attachments/assets/b0222600-efe2-4870-9390-6f1b27f3e66c)
 
+- **통합 테스트 결과**  
+  ![Integrated Test](https://docs.google.com/spreadsheets/d/1cvhOUu6IkRdQFFf9j1bP0VkYLdPPdypS3vugqQwlVOo/edit?gid=0#gid=0)
+
 ---
 
 ### 🚚 CI/CD 계획서
