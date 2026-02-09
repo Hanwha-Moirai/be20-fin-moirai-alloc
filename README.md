@@ -88,6 +88,7 @@ IT 프로젝트에서 PM이 겪는
 ### 🤖 AI
 ![Gemini](https://img.shields.io/badge/Gemini_2.0_Flash-4285F4?style=for-the-badge&logo=google&logoColor=white)
 ![HuggingFace](https://img.shields.io/badge/Hugging_Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
+![OpenAI](https://img.shields.io/badge/OpenAI-GPT--API-green)
 
 ---
 
