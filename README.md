@@ -240,7 +240,7 @@ IT 프로젝트에서 PM이 겪는
 
 ### 1) CloudFront(S3) ↔ ECS(ALB) 연동 후 로그인 실패 (401/403/ERR_CONNECTION_REFUSED)
 
-#### ✅ 현상
+#### 현상
 
 * 로그인 화면은 정상 표시되지만, 로그인 요청 시 **401/403** 또는 **ERR_CONNECTION_REFUSED**가 반복 발생
 * 브라우저에서 **Mixed Content(HTTPS 페이지에서 HTTP API 호출)** 이슈 동반
@@ -282,7 +282,7 @@ IT 프로젝트에서 PM이 겪는
 
 ### 2) SSE 알림 서비스에서 Hikari 커넥션 점유/Leak 발생 (Pool Exhaustion)
 
-#### ✅ 현상
+#### 현상
 
 * SSE 구독을 장시간 유지하거나 재연결이 반복될 때 간헐적으로:
 
@@ -314,7 +314,7 @@ IT 프로젝트에서 PM이 겪는
 
 ---
 
-### ✅ 회고 / 재발 방지 체크리스트
+### 회고 / 재발 방지 체크리스트
 
 * **단일 진입점**(CloudFront 등)으로 경로를 통일하면 CORS/Mixed Content/라우팅 이슈가 급감
 * 배포 환경에서 프론트 API URL은 **빌드 타임/런타임 주입 전략을 명확히** (env 고정값 점검)
