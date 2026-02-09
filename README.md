@@ -240,8 +240,6 @@ IT 프로젝트에서 PM이 겪는
 
 ### 1) CloudFront(S3) ↔ ECS(ALB) 연동 후 로그인 실패 (401/403/ERR_CONNECTION_REFUSED)
 
-![CloudFront-ECS Login Issue](docs/troubleshooting/cloudfront_ecs_login.png)
-
 #### ✅ 현상
 
 * 로그인 화면은 정상 표시되지만, 로그인 요청 시 **401/403** 또는 **ERR_CONNECTION_REFUSED**가 반복 발생
@@ -283,8 +281,6 @@ IT 프로젝트에서 PM이 겪는
 ---
 
 ### 2) SSE 알림 서비스에서 Hikari 커넥션 점유/Leak 발생 (Pool Exhaustion)
-
-![SSE Hikari Leak](docs/troubleshooting/sse_hikari_leak.png)
 
 #### ✅ 현상
 
