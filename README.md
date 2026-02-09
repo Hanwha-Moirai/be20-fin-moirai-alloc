@@ -44,7 +44,7 @@ IT 프로젝트에서 PM이 겪는
 
 ## 🏗 시스템 아키텍처
 
-![System Architecture](https://github.com/user-attachments/assets/6d9071b3-2c4b-4cc6-a5b6-e4aaca6c1138)
+![System Architecture](https://github.com/user-attachments/assets/fd84d7d7-bb27-4f3a-8061-f90eff81c35e)
 
 ---
 
