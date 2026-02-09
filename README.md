@@ -229,3 +229,99 @@ IT 프로젝트에서 PM이 겪는
 ![관리자 위험 관리 지침서 업로드](https://raw.githubusercontent.com/Hanwha-Moirai/be20-fin-moirai-alloc/main/docs/gif/%E1%84%80%E1%85%AA%E1%86%AB%E1%84%85%E1%85%B5%E1%84%8C%E1%85%A1%20%E1%84%8B%E1%85%B1%E1%84%92%E1%85%A5%E1%86%B7%20%E1%84%80%E1%85%AA%E1%86%AB%E1%84%85%E1%85%B5%20%E1%84%8C%E1%85%B5%E1%84%8E%E1%85%B5%E1%86%B7%E1%84%89%E1%85%A5%20PDF%20%E1%84%8B%E1%85%A5%E1%86%B8%E1%84%85%E1%85%A9%E1%84%83%E1%85%B3.gif)
 
 ![리스크 리포트 생성](https://raw.githubusercontent.com/Hanwha-Moirai/be20-fin-moirai-alloc/main/docs/gif/%E1%84%85%E1%85%B5%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%20%E1%84%85%E1%85%B5%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%20%E1%84%89%E1%85%A2%E1%86%BC%E1%84%89%E1%85%A5%E1%86%BC.gif)
+
+---
+
+## 🧯 트러블 슈팅 (Troubleshooting)
+
+배포/운영 환경에서 실제로 겪었던 이슈를 **현상 → 원인 → 해결 구조 → 결과/회고** 순서로 정리했습니다.
+
+---
+
+### 1) CloudFront(S3) ↔ ECS(ALB) 연동 후 로그인 실패 (401/403/ERR_CONNECTION_REFUSED)
+
+![CloudFront-ECS Login Issue](docs/troubleshooting/cloudfront_ecs_login.png)
+
+#### ✅ 현상
+
+* 로그인 화면은 정상 표시되지만, 로그인 요청 시 **401/403** 또는 **ERR_CONNECTION_REFUSED**가 반복 발생
+* 브라우저에서 **Mixed Content(HTTPS 페이지에서 HTTP API 호출)** 이슈 동반
+
+#### 🔍 원인 (단일 원인이 아닌 “구성 불일치 누적”)
+
+* 프론트 API Base URL이 **빌드 타임에 `localhost`로 고정**되어 배포 환경에서 잘못된 주소로 호출
+* CloudFront에 **`/api/*` → ALB 라우팅(Behavior)** 이 없어서 API 요청이 정적 오리진(S3)로 흘러감
+* ALB에 **HTTPS 리스너 부재**로 인해 보안/프로토콜 정책이 꼬이며 401/403, Mixed Content 유발
+* **S3 OAC** 설정/버킷 정책의 ARN 불일치로 정적 리소스 접근 정책이 흔들림
+* SPA(history mode)에서 **404/403 발생 시 index.html로 fallback 미처리** → 라우팅 실패
+
+#### 🛠 해결 (CloudFront를 “단일 진입점(Single Entry)”으로 재설계)
+
+* **프론트/백엔드 접근 경로를 동일 오리진으로 통일**
+
+  * 브라우저는 항상 **CloudFront 도메인으로만 요청**
+  * API는 `/api` prefix로 고정 (예: `https://{CF_DOMAIN}/api/...`)
+* **CloudFront Behavior 추가**
+
+  * Path pattern: `/api/*`
+  * Origin: ALB (ECS)
+  * Viewer protocol policy: Redirect HTTP to HTTPS
+* **TLS 종료(HTTPS Termination)는 CloudFront에서만 담당**
+
+  * 브라우저 입장에서는 항상 HTTPS → Mixed Content 제거
+* **SPA 라우팅 보정**
+
+  * CloudFront Custom Error Response로 **403/404 → `/index.html`** 매핑
+* 설정 반영 즉시화를 위해 **Cache Invalidation** 수행
+
+#### 🎯 결과
+
+* 로그인/인증 API 정상 동작
+* **401/403/Mixed Content 이슈 완전 해소**
+* 프론트(S3/CloudFront) – 백엔드(ECS/ALB) **분리 배포 구조 안정화**
+
+---
+
+### 2) SSE 알림 서비스에서 Hikari 커넥션 점유/Leak 발생 (Pool Exhaustion)
+
+![SSE Hikari Leak](docs/troubleshooting/sse_hikari_leak.png)
+
+#### ✅ 현상
+
+* SSE 구독을 장시간 유지하거나 재연결이 반복될 때 간헐적으로:
+
+  * **Hikari 커넥션 풀 고갈 / 대기 증가**
+  * **Leak Detection 트리거** (로그 stacktrace가 stream 경로와 일치)
+  * 상황에 따라 **504 / 응답 지연** 발생 가능
+
+#### 🔍 원인 (트랜잭션 수명 관리 실패)
+
+* **SSE(장기 연결)** 흐름과 **DB 접근/트랜잭션**이 결합되며, 트랜잭션 수명이 비정상적으로 길어질 위험
+* 재연결 폭주 시 동시 요청이 급증 → 커넥션 풀이 빠르게 소진
+* 이벤트 발행 기반 구조가 섞이며 전체 리소스 흐름이 복잡해져 병목/누수 포인트 파악이 어려움
+
+#### 🛠 해결 (SSE → Polling 전환 + 증분 조회 도입)
+
+* 알림 전달 방식을 **SSE → Polling** 으로 전환
+* “기준 시점 이후 변경분만 조회”하는 **증분 조회(Incremental Fetch)** 구조 도입
+
+  * 예: `sinceId`(또는 cursor) 기반으로 신규 알림만 조회
+  * 응답에 **신규 알림 + unread count + latest cursor** 포함
+* SSE 이벤트 발행/전파 중심 구조 제거 → **알림 처리 흐름 단순화**
+* 변경된 방식에 맞춰 **WebMvc 테스트/검증 기준 업데이트**
+
+#### 🎯 결과
+
+* 알림 구독 트래픽에서 발생하던 **서버 다운/풀 고갈 문제 해소**
+* 장기 연결로 인한 DB 리소스 점유가 사라져 **운영 안정성 개선**
+* “전파(푸시)” 중심 → “조회(풀)” 중심으로 전환하며 **구조가 단순해지고 디버깅/관측이 쉬워짐**
+
+---
+
+### ✅ 회고 / 재발 방지 체크리스트
+
+* **단일 진입점**(CloudFront 등)으로 경로를 통일하면 CORS/Mixed Content/라우팅 이슈가 급감
+* 배포 환경에서 프론트 API URL은 **빌드 타임/런타임 주입 전략을 명확히** (env 고정값 점검)
+* SSE/WebSocket 같은 **장기 연결**은 DB 트랜잭션과 결합하지 않도록 설계 (짧은 쿼리 + 즉시 반환 원칙)
+* 재연결 폭주/동시 요청 급증 시나리오를 전제로 **부하 테스트 + 커넥션 풀 관측 지표**를 선제적으로 준비
+
