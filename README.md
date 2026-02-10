@@ -13,6 +13,18 @@ IT 프로젝트에서 PM이 겪는
 
 ---
 
+## 👩‍👧‍👦 Moirai 멤버 소개
+
+<div align="center">
+
+| 김명진 | 김동리 | 김현수 | 박연수 | 배창민 |
+|:--:|:--:|:--:|:--:|:--:|
+| <img src="/docs/img/3.png" width="150"> | <img src="/docs/img/2.png" width="150"> | <img src="/docs/img/1.png" width="150"> | <img src="/docs/img/4.png" width="150"> | <img src="/docs/img/5.png" width="150"> |
+
+</div>
+
+---
+
 ## 🧩 핵심 기능
 
 - **프로젝트 관리**
