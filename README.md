@@ -227,9 +227,10 @@ IT 프로젝트에서 PM이 겪는
 ---
 
 ### ⚠️ 리스크 관리
-**리스크 관리 (관리자 지침서 기반 위험 분석 및 자동 리포트 생성)**  
+**리스크 관리 (관리자 PMO 리스크 관리 지침서 PDF 업로드)**  
 ![관리자 위험 관리 지침서 업로드](https://github.com/Hanwha-Moirai/be20-fin-moirai-alloc/blob/c48b1a1a0e2f514b6affeb4f1f470507346fc0d2/docs/gif/PDF%20%E1%84%8B%E1%85%A5%E1%86%B8%E1%84%85%E1%85%A9%E1%84%83%E1%85%B3.gif)
 
+**리스크 관리 (관리자 지침서 기반 위험 분석 및 자동 리포트 생성)**  
 ![리스크 리포트 생성](https://raw.githubusercontent.com/Hanwha-Moirai/be20-fin-moirai-alloc/main/docs/gif/%E1%84%85%E1%85%B5%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%20%E1%84%85%E1%85%B5%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%20%E1%84%89%E1%85%A2%E1%86%BC%E1%84%89%E1%85%A5%E1%86%BC.gif)
 
 ---
