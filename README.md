@@ -20,6 +20,8 @@ IT 프로젝트에서 PM이 겪는
 | 김명진 | 김동리 | 김현수 | 박연수 | 배창민 |
 |:--:|:--:|:--:|:--:|:--:|
 | <img src="/docs/img/3.png" width="150"> | <img src="/docs/img/2.png" width="150"> | <img src="/docs/img/1.png" width="150"> | <img src="/docs/img/4.png" width="150"> | <img src="/docs/img/5.png" width="150"> |
+| 백엔드, 보안 | 백엔드, ML | 팀장, 백엔드, ML | 기획, 프론트엔드 | 백엔드, 인프라 |
+``` :contentReference[oaicite:0]{index=0}
 
 </div>
 
